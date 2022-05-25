@@ -1,19 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
 
-@media (min-width: 1025px) {
+
 	
 	.main-header {
 		align-items: flex-start;
 		justify-content: center;
 		border-bottom: none;
-		border-right: 1px solid #000;
+		/*border-right: 3px solid #FFFFFF;*/
 		height: 100%;
 		padding: 23px 0 0;
 		width: 81px;
 		box-sizing: border-box;
 		z-index: 1;
 		position: relative;
+		background-color: #434343;
 	}
 	
 	.logo {
@@ -65,7 +66,7 @@
 	}
 	
 	section:first-child {
-		border-left: none;
+		border: none;
 	}
 	
 	#first {
@@ -88,19 +89,35 @@
 		width: 150px;
 		cursor: pointer;
 		box-sizing: border-box;
-		border-left: 1px solid #000;
+		border-left: none;
+	}
+	
+	.section-header:hover {
+		
 	}
 	
 		.section-header-a {
-			color: #ffcc01;
+			font-weight: 400;
+			font-size: 30px;
+			border-left: 3px solid #FFCC00;
+			background-color: #434343;
+			color: #FFCC00;
 	}
 	
 		.section-header-b {
-			color: #2b8c44;
+			font-weight: 400;
+			font-size: 30px;
+			border-left: 3px solid #35B055;
+			background-color: #434343;
+			color: #35B055;
 	}
 	
 		.section-header-c {
-			color: #134dc2;
+			font-weight: 400;
+			font-size: 30px;
+			border-left: 3px solid #336FE8;
+			background-color: #434343;
+			color: #336FE8;
 	}
 	
 	.section-header .titleb {
@@ -114,19 +131,17 @@
 	
 	.section-header .titlea {
 		position: absolute;
-		top: 35px;
-		left: 0;
-		right: 0;
-		text-align: center;
+		bottom: 80px;
+		left: calc(50% - 20px);
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
 	}
 	
 	.container {
 		width: 100%;
-		display: flex;
 		overflow: auto;
 		height: 100vh;
 		opacity: 100; /*컨테이너 투명도*/
-		transition: 0.5s opacity;
 	}
 	
 	section.active .container {
@@ -153,7 +168,8 @@
 	
 	.home {
 		transform: none;
-		width: calc(100vw - 6 * 150px);
+		width: 100%;
+		background-color: #434343;
 	}
 	
 	.home .container {
@@ -164,35 +180,55 @@
 		align-items: stretch;
 		display: flex;
 		flex: 1;
-		min-height: 350px;
+		min-height: 100px;
 	}
 	
 	.top {
+		color: #ffffff;
 		margin-left: 50px;
 		margin-top: 150px;
 		text-align: left;
 		font-size: 25px;
+		position: relative;
 	}
 	
-	.home .details  {
-		align-items: flex-end;
-		border-top: 1px solid #000;
-		display: flex;
-		height: 230px;
-		padding: 0 0 0 80px;
+	.ko {
+		font-weight: 500;
+		font-size: 60px;
+		position: absolute;
+		width: 600px;
+		height: auto;
+		top: 0;
 	}
 	
-	.home .details p {
-		display: inline-block;
-		margin-bottom: 0;
-		margin-right: 100px;
+	.en {
+		font-weight: 400;
+		font-size: 28px;
+		position: absolute;
+		width: 520px;
+		top: 270px;
+		left: 0;
 	}
 	
-	.home .details p:nth-child(2) {
-		margin-right: 0;
-		padding: 0;
+	.title-pointA {
+		position: relative;
+		top: 5px;
+		color: #FFCC00;
+		font-weight: 700;
+	}
+	
+	.title-pointB {
+		position: relative;
+		top: 5px;
+		color: #35B055;
+		font-weight: 700;
+	}
+	
+	.title-pointC {
+		position: relative;
+		top: 5px;
+		color: #336FE8;
+		font-weight: 700;
 	}
 
-
 	
-}

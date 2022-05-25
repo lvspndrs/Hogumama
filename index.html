@@ -9,13 +9,13 @@
     <title>Nuclear disaster survival guide</title>
 	
 	<link rel="stylesheet" href="css/desktop.css">
-	<link rel="stylesheet" href="css/mobile.css">
-	
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+		
 		* {
 			box-sizing: border-box;
 			overscroll-behavior: none;
-			-webkit-tap-highlight-color: transparent;
+			font-family: 'Noto Sans KR', sans-serif;
 		}
 		
 		body, html {
@@ -54,8 +54,8 @@
 
 <body>
 	<header class="main-header">
-		<div class="logo"><img src="img/logo.svg" alt="Nuclear logo"></div>
 		<button class="home-prompt"></button>
+		<div class="logo"><img src="img/logo.svg" alt="Nuclear logo"></div>
 		<button class="hamburger hamburger--slider"
 				type="button"
 				aria-label="Menu"
@@ -71,21 +71,19 @@
 		<section class="home">
 			<div class="container">
 				<div class="top">
-					<p>
-						핵/방사능 재난 대비 행동 지침서 <br/>
-					    Nuclear disaster survival guide
-					</p>				
+						<span class="ko">핵/방사능 <br/> 재난 대비 <br/> 행동 지침서
+							<span class="en">NUCLEAR DISASTER SURVIVAL GUIDE</span>	
+					</span>	
 				</div>
-			</div>
-			<div class="details">
-				<!--top밑에-->
 			</div>
 		</section>
 		<section id="first">
-			<header class="section-header section-header-a">
-				<span class="titlea"></span>
-				<span class="titleb">발생전</span>
-			</header>
+			<a href="html/before.html">
+				<header class="section-header section-header-a">
+				    <span class="titlea">발생<span class="title-pointA">전</span></span>
+				    <span class="titleb"></span>
+			    </header>
+			</a>
 			<div class="container">
 				<div class="">
 					<div class="introduction">
@@ -96,8 +94,8 @@
 		</section>
 		<section id="second">
 			<header class="section-header section-header-b">
-				<span class="titlea"></span>
-				<span class="titleb">발생시</span>
+				<span class="titlea">발생<span class="title-pointB">시</span></span>
+				<span class="titleb"></span>
 			</header>
 			<div class="container">
 				<div class="">
@@ -109,8 +107,8 @@
 		</section>
 		<section id="third">
 			<header class="section-header section-header-c">
-				<span class="titlea"></span>
-				<span class="titleb">발생후</span>
+				<span class="titlea">발생<span class="title-pointC">후</span></span>
+				<span class="titleb"></span>
 			</header>
 			<div class="container">
 				<div class="">
@@ -121,7 +119,5 @@
 			</div>
 		</section>
 	</main>
-
-	<script src="js/main.js"></script>
 </body>
 </html>
