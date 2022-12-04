@@ -42,6 +42,22 @@ video {width: 100%;}
   color: #fff;
 }
 
+.ytb {
+  position: relative;
+  top: 210px;
+  width: 100%;
+  height: auto;
+  padding-top: 50%;
+}
+
+iframe {
+  top:0;
+  left:0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .story {
   max-width:1920px;
   margin:0 auto;
