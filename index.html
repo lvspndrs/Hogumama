@@ -1,127 +1,73 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimal-ui, viewport-fit=cover,
-							   initial-scale=1.0, minimum-scale=1.0" />
-
-    <title>Nuclear disaster survival guide</title>
-	
-	<link rel="stylesheet" href="css/desktop.css">
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-		
-		* {
-			box-sizing: border-box;
-			overscroll-behavior: none;
-			font-family: 'Noto Sans KR', sans-serif;
-		}
-		
-		body, html {
-			height: 100%;
-		}
-		
-		:root {
-			overflow-x: hidden
-		}
-		
-		body, button, p {
-			margin: 0;
-			padding: 0;
-		}
-		
-		button, select {
-			border: none;
-			outline: none;
-			background: none;
-			font-family: inherit;
-			color: inherit;
-		}
-		
-		a {
-			color: inherit;
-			text-decoration: none;
-		}
-		
-		body {
-			background-color: #fff;
-			color: #000;
-			min-height: 100vh;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>호구마</title>
 </head>
-
 <body>
-	<header class="main-header">
-		<a href="index.html"><button class="home-prompt"></button></a>
-		<div class="logo"><img src="img/logo.svg" alt="Nuclear logo"></div>
-		<button class="hamburger hamburger--slider"
-				type="button"
-				aria-label="Menu"
-				aria-controls="navigation">
-			<label>메뉴</label>
-			<span class="hamburger-box">
-				<span class="hamburger-inner"></span>
-			</span>
-		</button>
-	</header>
-	
-	<main>
-		<section class="home">
-			<div class="container">
-				<div class="top">
-						<span class="ko">핵/방사능 <br/> 재난 대비 <br/> 행동 지침서
-							<span class="en">NUCLEAR DISASTER SURVIVAL GUIDE</span>	
-					</span>	
-				</div>
-			</div>
-		</section>
-		<section id="first">
-			<a href="html/before.html">
-				<header class="section-header section-header-a">
-				    <span class="titlea">발생<span class="title-pointA">전</span></span>
-				    <span class="titleb"></span>
-			    </header>
-			</a>
-			<div class="container">
-				<div class="">
-					<div class="introduction">
-						<p>가나다라마바사</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="second">
-			<a href="html/ing.html">
-			<header class="section-header section-header-b">
-				<span class="titlea">발생<span class="title-pointB">시</span></span>
-				<span class="titleb"></span>
-			</header>
-			</a>
-			<div class="container">
-				<div class="">
-					<div class="introduction">
-						<p>가나다라마바사</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="third">
-			<a href="html/after.html">
-			<header class="section-header section-header-c">
-				<span class="titlea">발생<span class="title-pointC">후</span></span>
-				<span class="titleb"></span>
-			</header>
-			</a>
-			<div class="container">
-				<div class="">
-					<div class="introduction">
-						<p>가나다라마바사</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
+  <div class="mainWrap">
+        <video src="img/main.mp4" autoplay loop muted> </video>
+  </div>
+  <div class="box1"></div>
+  <div class="vid">
+    <div id="vid"> VIDEO </div>
+  </div>
+  <div class="story">
+    <div id="story"> STORY </div>
+    <div id="s_img1">
+      <img src="img/intro1.png" alt="intro1">
+    </div>
+    <div id="s_text1"> <p>
+      <br>
+      <br>
+      <br>
+      같은 학과 친구들과 한 조가 된 호구마, 평소 관심이 있었던 나여주에게 멋진 모습을 보여주고 싶어 하지만 소심한 성격은 여전하다.
+  설상가상 김선배의 등장으로 호구마는 더 큰 벽을 마주하게 되는데...  호구마는 김선배와 나여주 사이에서 눈치만 보다 결국...
+    </p> </div>
+    <div id="s_img2">
+      <img src="img/intro2.png" alt="intro2">
+    </div>
+    <div id="s_text2"> <p>
+      <br>
+      <br>
+      <br>
+      시력검사를 하러 안과에 방문한 호구마. 소심한 성격 탓에 하고싶은 말도 쉽게 내뱉지 못한다. 미약한 존재감 때문에 주변인에게 무시당하는 건
+일상이다. 과연 그는 무사히 시력검사를 마칠 수 있을까?
+    </p>  </div>
+  </div>
+  <div class="character">
+    <div id="character"> CHARACTERS </div>
+  </div>
+
+  <div class="section">
+    <input type="radio" name="slide" id="slide01" checked>
+    <input type="radio" name="slide" id="slide02">
+
+    <div class="slidewrap">
+      <ul class="slidelist">
+        <li>
+          <a>
+            <label for="slide02" class="left"></label>
+            <img src="img/slide01.png">
+            <label for="slide02" class="right"></label>
+          </a>
+        </li>
+        <li>
+          <a>
+            <label for="slide01" class="left"></label>
+            <img src="img/slide02.png">
+            <label for="slide01" class="right"></label>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p id="cr">Copyright 2022. 강시원 박진령. All rights reserved.</p>
+  </div>
 </body>
 </html>
