@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+
+body {
+	overflow: hidden;
+	margin: 0;
+}
+#three-canvas {
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.title {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Darumadrop One', cursive;
+	font-size: 120px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.round-button {
+	border-radius: 50%;
+	border-style: none;
+	width: 150px;
+	height: 150px;
+	background-color: white;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Darumadrop One', cursive;
+  }
+
+.your-custom-font-class {
+	font-family: 'Orbit', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+  }
+
