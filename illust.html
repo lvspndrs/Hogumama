@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOONG</title>
+    <link rel="stylesheet" href="illust.css">
+
+    <style>
+        body {
+            margin: 0;
+	        background: #fff;
+        }
+        
+ ul {list-style: none;}
+
+ a { text-decoration: none; color: #000; font-size: 18px; font-weight: 600;}
+
+ nav {
+  width: 90%;
+  overflow: hidden;
+  height: 100px;
+  margin: 0px auto;
+  /* background-color:#2d2d2d; */
+ }
+
+ .nav1>a {
+  display: block; /* a태그는 글자성격 = inline */
+  float: left;
+  padding: 0 30px;
+  left: -35px;
+}
+.nav1>ul {
+  float: right;
+}
+.nav1>ul li {
+  float: left;
+  padding: 0 30px;
+  line-height: 80px;
+}
+
+.bot {
+    height: 100px;
+}
+    </style>
+</head>
+<body>
+
+    <nav class="nav1">
+        <a href="index.html"><img src="./img/logo.png" alt="logo" width="100px"></a>
+        <ul>
+            <li><a href="cha.html">CHARACTER</a></li>
+            <li><a href="illust.html">ILLUST</a></li>
+            <li><a href="shop.html">SHOP</a></li>
+        </ul>
+    </nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+<div class="container">
+    <div class="img-popup">
+      <div class="popup-inner">
+        <img src="https://picsum.photos/900/630" alt="이미지1">
+        <a href="#" class="close-btn"><i class="xi-close"></i><span class="blind">팝업창 닫기</span></a>
+      </div>
+    </div>
+
+    <script>
+        $(function(){
+  // 변수 선언
+  var imageButton = $('.item-box .item-img a');
+  var popup = $('.img-popup');
+  var closeButton = popup.find('> .popup-inner > .close-btn');
+  var htmlAndBody = $('html, body');
+  var focusTarget;
+
+  // 팝업 생성
+  imageButton.on('click', function(e){
+    e.preventDefault();
+    var popupImg = popup.find('> .popup-inner > img');
+    var image = $(this).find('> img');
+    var src = image.attr('src');
+    var alt = image.attr('alt');
+    focusTarget = $(this);
+    popupImg.attr('src', src).attr('alt', alt);
+    createPopup();
+  });
+
+  // 팝업 제거
+  popup.on('click', function(){
+    removePopup();
+  });
+  closeButton.on('click', function(e){
+    e.preventDefault();
+    removePopup();
+  });
+
+  // 팝업창 검은배경과 닫기 버튼을 제외한 나머지 부분 클릭시 닫히지 않도록 하기
+  popup.find('> .popup-inner').on('click', function(e){
+    e.stopPropagation();
+  })
+
+  // 팝업 생성 함수
+  function createPopup(){
+    popup.addClass('active');
+    htmlAndBody.css('overflow-y', 'hidden');
+    setTimeout(function(){
+      closeButton.focus();
+    }, 50);
+  }
+  // 팝업 제거 함수
+  function removePopup(){
+    popup.removeClass('active');
+    focusTarget.focus();
+    htmlAndBody.css('overflow-y', 'visible');
+  }
+})
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="item-box">
+      <div class="item-img">
+        <a href="#"><img src="./img/3.jpg" alt="이미지1"></a>
+        <a href="#"><img src="./img/2.jpg" alt="이미지2"></a>
+      </div>
+      <div class="item-img">
+        <a href="#"><img src="./img/1.jpg" alt="이미지3"></a>
+        <a href="#"><img src="./img/4.jpg" alt="이미지4"></a>
+      </div>
+      <div class="item-img">
+        <a href="#"><img src="./img/4.jpg" alt="이미지5"></a>
+        <a href="#"><img src="./img/4.jpg" alt="이미지6"></a>
+      </div>
+      <div class="item-img">
+        <a href="#"><img src="./img/4.jpg" alt="이미지7"></a>
+        <a href="#"><img src="./img/4.jpg" alt="이미지8"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bot">
+
+  </div>
+    
+</body>
+</html>
