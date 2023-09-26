@@ -506,20 +506,20 @@ footer {
   }
 
   
-  footer {
+  .foofoo {
 	font-family: 'Noto Sans KR', sans-serif;
     background-color: #f0f0f0; /* Background color for the footer */
     padding: 20px; /* Padding for the footer */
     text-align: center; /* Center the content inside the footer */
   }
 
-  footer .acontainer {
+  .foofoo .acontainer {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  footer .atext p {
+  .foofoo .atext p {
     margin: 0;
     display: inline;
     margin-right: 20px;
