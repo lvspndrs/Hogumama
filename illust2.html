@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOONG</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+		<div class="container">
+			<h1><a href="index.html"><img src="assets/logo.png" alt="" class="logo1"></a></h1>
+			<nav class="main-navigation">
+        <a href="about.html" class="d2">ABOUT</a>
+				<a href="cha.html" class="d2">CHARACTER</a>
+				<a href="illust.html" class="d2">CARTOON</a>
+			</nav>
+			<button class="more-btn2">
+				<i class="icon"></i>
+			</button>
+		</div>
+	</header>
+    
+    <div class="top"></div>
+
+    <div class="container2">
+		
+		<div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img id="modalImage" src="" alt="">
+            </div>
+        </div>
+
+        <div class="card" onclick="openModal('assets/shower.jpg')">
+          <div class="img-gradient"></div>
+          <img id="modalImage" src="assets/shower.jpg" alt="" srcset="">
+          <div class="text-wrap">
+            <h1>목욕</h1>
+          </div>
+        </div>
+          
+          <div class="card" onclick="openModal('assets/chr.jpg')">
+            <div class="img-gradient"></div>
+            <img id="modalImage" src="assets/chr.jpg" alt="" srcset="">
+            <div class="text-wrap">
+              <h1>크리스마스</h1>
+            </div>
+          </div>
+          
+          <div class="card" onclick="openModal('assets/halloween.jpg')">
+            <div class="img-gradient"></div>
+            <img id="modalImage" src="assets/halloween.jpg"  alt="" srcset="">
+            <div class="text-wrap">
+              <h1>고양이의 성</h1>
+            </div>
+          </div>
+		
+	</div>
+
+    <div class="top2"></div>
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+	  <script src="js/custom.js"></script>
+</body>
+</html>

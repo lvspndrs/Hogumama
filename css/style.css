@@ -71,12 +71,17 @@ a {
 	color: #fff;
 	margin-left: 20px;
 	margin-right: 20px;
+	display: inline;
 }
 
 .main-navigation .d2 {
 	color: #2d2d2d;
 	font-weight: bold;
 }
+
+header .main-navigation a img {
+    vertical-align: middle; /* Align the image vertically in the middle */
+  }
 
 .main-navigation a.active {
 	font-weight: bold;
@@ -135,26 +140,48 @@ a {
 	height: 100vh;
 	overflow: hidden;
 	background-color: #2d2d2d;
+	z-index: 1;
 }
 
 .hero-bg .container {
 	height: 100%;
 }
 
-.video-wrap {
-	position: absolute;
-	left: 0px;
-	width: 1600px;
-	height: 100vh;
-	z-index: 1;
-	top: -50px
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
+
+.bg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
 
 .video-wrap video,
 .video-wrap img {
 	position: absolute;
 	display: block;
 	width: 100%;
+}
+
+.video-wrap .homeimg {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain; /* 이미지가 부모 요소에 맞게 비율을 유지하면서 보여집니다. */
+    max-width: 100%;
+    max-height: 100%;
 }
 
 
@@ -171,17 +198,19 @@ a {
 
 
 footer {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 10px;
-	color: #8e8e8e;
-	width: 100%;
-	height: 40px;
-	bottom: 0;
-	position: absolute;
-	z-index: 3;
-	left: 42%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: #8e8e8e;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0; /* 화면 하단에 고정 */
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center; /* 수평 가운데 정렬 */
 }
-
 
 /* character */
 .toon_wrap {
@@ -211,25 +240,40 @@ footer {
 	text-align: center;
 	margin-top: 30px;
 	font-family: 'Noto Sans KR', sans-serif;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
-/* #pick{
-	transform: scale(0.95);
+
+.card {
+    transition: 0.3s;
+    position: relative;
+    border-radius: 8px;
+    width: 30%; /* 초기 너비 설정 */
+    max-width: 280px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+	width: 250px;
+	height: 250px;
+
+    /* 반응형 스타일: 화면 크기에 따라 카드의 너비를 조절 */
+    @media (max-width: 870px) {
+        width: 200px; /* 화면이 작아지면 카드의 너비를 조절 */
+		height: 200px;
+    }
+	@media (max-width: 719px) {
+        width: 150px; /* 화면이 작아지면 카드의 너비를 조절 */
+		height: 150px;
+    }
+
+    @media (max-width: 599px) {
+        width: 100%;
+		height: 100%; /* 화면이 더 작아지면 카드의 너비를 조절 */
+    }
 }
-#pick:hover{
-	transform: scale(1);
-} */
-.card{
-	transition: 0.3s;
-	position: relative;
-	border-radius: 8px;
-	width:100%;
-	max-width: 280px;
-	overflow: hidden;
-	display: inline-block;
-	margin:10px;
-	box-shadow: 0 20px 35px rgba(0,0,0,0.3);
-	transform: scale(1);
-}
+
 .card:hover{
 	transform: scale(0.95);
 }
@@ -240,9 +284,6 @@ footer {
 	bottom:0;
 	background: linear-gradient(rgba(45,45,45,.8), rgba(45,45,45,.5));
 	z-index: 1;
-}
-.card>img {
-	width: 280px;
 }
 
 .text-wrap{
@@ -282,7 +323,8 @@ footer {
   .modal-content {
 	margin: 5% auto; /* 모달 내용을 중앙에 정렬 */
 	padding: 20px;
-	width: 50%; /* 모달 내용의 너비 */
+	width: 720px;
+	height: 720px;
 	/* background-color: #fefefe; 내용 배경색 */
   }
   
@@ -381,6 +423,120 @@ footer {
 	margin: 0;
   }
 
+  /* 어바웃 페이지 */
+  .image-container {
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+	width: 100%; /* Adjust the width as needed */
+	max-width: 100%;
+	height: 500px;
+	overflow: hidden;
+	margin-top: 0; /* Adjust margin-top to control space from top */
+  }
+
+  .image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+  .text-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	padding: 10px;
+	width: 100%; /* Match overlay width with image width */
+	box-sizing: border-box; /* Include padding and border in overlay's total width and height */
+	text-align: center; /* Center the text horizontally */
+	line-height: 500px; /* Adjust line height for two lines */
+	font-size: 50px;
+	@media screen and (max-width:768px) {
+		font-size: 30px;
+	}
+  }
+
+
+
+  .bcontainer {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+	width: 60%;
+	margin: auto;
+	box-sizing: border-box;
+  }
+
+  .bimage {
+	flex: 1;
+	max-width: 100%;
+	height: auto;
+	padding-right: 0;
+	margin-bottom: 10px;
+  }
+
+  .btext {
+	font-family: 'Noto Sans KR', sans-serif;
+	flex: 1;
+	padding: 20px;
+	font-size: 18px; /* 텍스트의 기본 크기 */
+	line-height: 1.5; /* 텍스트의 줄 간격 */
+  }
+
+  @media (min-width: 769px) {
+	.bcontainer {
+	  flex-direction: row;
+	  align-items: center;
+	}
+
+	.bimage {
+	  padding-right: 20px;
+	  margin-bottom: 0;
+	}
+
+	.btext {
+	  font-family: 'Noto Sans KR', sans-serif;
+	  font-size: 20px; /* 화면이 큰 경우 텍스트 크기 증가 */
+	}
+  }
+
+  
+  footer {
+	font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f0f0f0; /* Background color for the footer */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center the content inside the footer */
+  }
+
+  footer .acontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .atext p {
+    margin: 0;
+    display: inline;
+    margin-right: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -429,6 +585,10 @@ footer {
 		padding:12px;
 
 	}
+
+	header .main-navigation a img {
+		vertical-align: middle; /* Align the image vertically in the middle */
+	  }
 	.main-navigation .d2 {
 		color: #fff;
 	}
@@ -441,11 +601,11 @@ footer {
 		width:200%;
 	}
 	.text-wrap{
-		width:100%;
-		height: auto;
-		padding:20px;
-		top:auto;
-		bottom:20px;
+		position: absolute;
+		bottom:0;
+		z-index: 10;
+		padding:24px;
+		text-align: left;
 	}
 	.text-wrap h2{
 		font-size: 36px;
@@ -511,10 +671,13 @@ footer {
 		color: #8e8e8e;
 		width: 100%;
 		height: 40px;
-		bottom: 0;
-		position: absolute;
-		z-index: 3;
-		left: 20%;
+		position: fixed;
+		bottom: 0; /* 화면 하단에 고정 */
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center; /* 수직 가운데 정렬 */
+		justify-content: center; /* 수평 가운데 정렬 */
 	}
 
 	.topbutton {
@@ -532,8 +695,22 @@ footer {
 		padding: 0;
 		margin: 0;
 	  }
+
+	  .modal-content {
+		margin: 20% auto; /* 모달 내용을 중앙에 정렬 */
+		padding: 20px;
+		width: 500px;
+		height: 500px;
+		/* background-color: #fefefe; 내용 배경색 */
+	  }
 }
 
 @media screen and (max-width: 480px) {
-
+	.modal-content {
+		margin: 30% auto; /* 모달 내용을 중앙에 정렬 */
+		padding: 0px;
+		width: 300px;
+		height: 300px;
+		/* background-color: #fefefe; 내용 배경색 */
+	  }
 }
