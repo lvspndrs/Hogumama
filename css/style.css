@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans+KR:wght@500&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #fff;
+	/* font-family: 'Montserrat', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif; */
+}
+
+.container {
+	width: 100%;
+	max-width: 1480px;
+	padding: 0 20px;
+	margin: auto;
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 0;
+	z-index: 3;
+}
+
+header h1 {
+	position: relative;
+	height: 40px;
+	margin:0;
+	float: left;
+	z-index: 3;
+}
+
+header h1 img{
+	display: block;
+	position: relative;
+	top:0px;
+	width: 150px;
+}
+
+header h1 img{
+	display: block;
+	position: relative;
+	top:0px;
+	width: 150px;
+}
+
+.logo1 {
+	top: -10px;
+	
+	width: 60px;
+}
+
+a {
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.main-navigation {
+	float: right;
+	margin-top: 10px;
+}
+
+.main-navigation a {
+	color: #fff;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: inline;
+}
+
+.main-navigation .d2 {
+	color: #2d2d2d;
+	font-weight: bold;
+}
+
+header .main-navigation a img {
+    vertical-align: middle; /* Align the image vertically in the middle */
+  }
+
+.main-navigation a.active {
+	font-weight: bold;
+	border-bottom: 2px solid #004fff;
+}
+
+.btn {
+	display: inline-block;
+	color: #fff;
+	font-weight: bold;
+	padding: 12px 20px;
+	border-radius: 8px;
+	background-color: #004fff;
+}
+
+.ghost-btn {
+	background-color: transparent;
+	border: 1px solid #004fff;
+}
+
+.text-wrap {
+	width: 520px;
+	height: 100vh;
+	padding: 240px 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.text-wrap h2 {
+	color: #fff;
+	font-size: 64px;
+	line-height: 1.25;
+	font-weight: lighter;
+	margin-bottom: 40px;
+}
+
+.text-wrap h3 {
+	color: #fff;
+	font-size: 24px;
+	line-height: 1.25;
+	margin-bottom: 20px;
+}
+
+.text-wrap p {
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.8;
+	margin-bottom: 20px;
+}
+
+.hero-bg {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #2d2d2d;
+	z-index: 1;
+}
+
+.hero-bg .container {
+	height: 100%;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.video-wrap video,
+.video-wrap img {
+	position: absolute;
+	display: block;
+	width: 100%;
+}
+
+.video-wrap .homeimg {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain; /* 이미지가 부모 요소에 맞게 비율을 유지하면서 보여집니다. */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.more-btn {
+
+	display: none;
+
+}
+.more-btn2 {
+
+	display: none;
+
+}
+
+
+footer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: #8e8e8e;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0; /* 화면 하단에 고정 */
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center; /* 수평 가운데 정렬 */
+}
+
+/* character */
+.toon_wrap {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	background-color: #000;
+}
+.toon {
+	width: 60%;
+}
+
+.profile {
+	width: 100%;
+}
+
+/* illust */
+
+.top {
+	margin-top: 200px;
+}
+.top2 {
+	margin-top: 50px;
+}
+
+.container2{
+	text-align: center;
+	margin-top: 30px;
+	font-family: 'Noto Sans KR', sans-serif;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.card {
+    transition: 0.3s;
+    position: relative;
+    border-radius: 8px;
+    width: 30%; /* 초기 너비 설정 */
+    max-width: 280px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+	width: 250px;
+	height: 250px;
+
+    /* 반응형 스타일: 화면 크기에 따라 카드의 너비를 조절 */
+    @media (max-width: 870px) {
+        width: 200px; /* 화면이 작아지면 카드의 너비를 조절 */
+		height: 200px;
+    }
+	@media (max-width: 719px) {
+        width: 150px; /* 화면이 작아지면 카드의 너비를 조절 */
+		height: 150px;
+    }
+
+    @media (max-width: 599px) {
+        width: 100%;
+		height: 100%; /* 화면이 더 작아지면 카드의 너비를 조절 */
+    }
+}
+
+.card:hover{
+	transform: scale(0.95);
+}
+.img-gradient{
+	position: absolute;
+	width:100%;
+	height: 100%;
+	bottom:0;
+	background: linear-gradient(rgba(45,45,45,.8), rgba(45,45,45,.5));
+	z-index: 1;
+}
+
+.text-wrap{
+	position: absolute;
+	bottom:0;
+	z-index: 10;
+	padding:24px;
+	text-align: left;
+}
+.text-wrap h1{
+	font-size: 18px;
+	margin-bottom:8px;
+	color:#fff;
+}
+.text-wrap p{
+	color:#fff;
+	line-height: 1.5;
+}
+
+/* modal */
+/* 모달 스타일 */
+.modal {
+	display: none; /* 기본적으로 모달 숨김 */
+	position: fixed; /* 화면 고정 위치 */
+	top: 0;
+	left: 0;
+	width: 100%; /* 화면 전체 너비 */
+	height: 100%; /* 화면 전체 높이 */
+	overflow: auto; /* 스크롤이 필요한 경우 스크롤 허용 */
+	background-color: rgb(0,0,0); /* 배경색 - 어두운 회색 */
+	background-color: rgba(0,0,0,0.9); /* 배경색 - 어두운 회색 (투명도 설정) */
+	padding-top: 0px; /* 모달 내용 상단 여백 */
+	z-index: 1000;
+  }
+  
+  /* 모달 내용 스타일 */
+  .modal-content {
+	margin: 5% auto; /* 모달 내용을 중앙에 정렬 */
+	padding: 20px;
+	width: 720px;
+	height: 720px;
+	/* background-color: #fefefe; 내용 배경색 */
+  }
+  
+  /* 모달 닫기 버튼 스타일 */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  #modalImage {
+	width: 100%; /* 이미지를 모달 창의 너비에 맞게 조절 */
+	height: auto; /* 가로 비율 유지를 위해 높이 자동 조절 */
+  }
+
+  
+  /* 스크롤상단이동 */
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 200px auto 0;
+}
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 48%; /* 이미지 컨테이너의 너비를 조절하여 2줄로 배치 */
+}
+
+.image-container .image-wrapper {
+    position: relative;
+    overflow: hidden; /* 이미지 크기에 맞게 배경을 자르기 위해 overflow 설정 */
+}
+
+.image-container img {
+    max-width: 100%; /* 이미지가 부모 요소에 맞게 크기 조절 */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.image-container .image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* 이미지와 동일한 너비 */
+    height: 96.5%; /* 이미지와 동일한 높이 */
+    background: rgba(0, 0, 0, 0); /* 초기에 투명한 배경 */
+    transition: background 0.3s ease-in-out; /* 트랜지션 효과 */
+}
+
+.image-container .image-wrapper:hover::after {
+    background: rgba(0, 0, 0, 0.5); /* hover 시 alpha값이 들어간 배경 */
+}
+
+.image-container .image-text {
+	font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0; /* 초기에 투명하게 설정 */
+    transition: opacity 0.3s ease-in-out; /* 트랜지션 효과 */
+	z-index: 999;
+}
+
+.image-container .image-wrapper:hover .image-text {
+    opacity: 1; /* hover 시 텍스트 나타나기 */
+}
+
+  
+.topbutton {
+	color: white;
+	width: 30px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+  }
+
+  .topbutton p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+  }
+
+  /* 어바웃 페이지 */
+  .image-container {
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+	width: 100%; /* Adjust the width as needed */
+	max-width: 100%;
+	height: 500px;
+	overflow: hidden;
+	margin-top: 0; /* Adjust margin-top to control space from top */
+  }
+
+  .image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+  .text-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	padding: 10px;
+	width: 100%; /* Match overlay width with image width */
+	box-sizing: border-box; /* Include padding and border in overlay's total width and height */
+	text-align: center; /* Center the text horizontally */
+	line-height: 500px; /* Adjust line height for two lines */
+	font-size: 50px;
+	@media screen and (max-width:768px) {
+		font-size: 30px;
+	}
+  }
+
+
+
+.bcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.bimage {
+  width: 100%; /* 이미지의 너비를 100%로 설정하여 화면에 맞게 조절 */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.btext {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (min-width: 769px) {
+  .bcontainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .bimage {
+    width: 100%; /* 이미지의 너비를 100%로 설정하여 화면에 맞게 조절 */
+    margin: 0 auto; /* 이미지를 가로 중앙 정렬합니다 */
+  }
+
+  .btext {
+    font-size: 20px;
+  }
+}
+
+
+  
+  .foofoo {
+	font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f0f0f0; /* Background color for the footer */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center the content inside the footer */
+  }
+
+  .foofoo .acontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .foofoo .atext p {
+    margin: 0;
+    display: inline;
+    margin-right: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+	#instaImage {
+        content: url('assets/insta1.png');
+        width: 30px;
+      }
+
+	header{
+		padding: 0;
+		height: 56px;
+	}
+	header h1{
+		height: 56px;
+	}
+	header h1 img{
+		top:20px;
+		width: 100px;
+	}
+
+	.logo1 {
+		top: 10px;
+		width: 40px;
+	}
+
+	.main-navigation{
+		position: fixed;
+		top:0;
+		right:0;
+		margin: 0;
+		padding:80px 20px;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(45,45,45,0.9);
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(100%);
+		transition: 0.3s;
+	}
+	.main-navigation.active{
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+		transition: 0.3s;
+	}
+	.main-navigation a{
+		display: block;
+		margin:auto;
+		margin-bottom:8px;
+		padding:12px;
+
+	}
+
+	header .main-navigation a img {
+		vertical-align: middle; /* Align the image vertically in the middle */
+	  }
+	.main-navigation .d2 {
+		color: #fff;
+	}
+	.main-navigation a.btn{
+		text-align: center;
+	}
+	.video-wrap{
+		top:5vw;
+		left:-50%;
+		width:200%;
+	}
+	.text-wrap{
+		position: absolute;
+		bottom:0;
+		z-index: 10;
+		padding:24px;
+		text-align: left;
+	}
+	.text-wrap h2{
+		font-size: 36px;
+	}
+	.text-wrap h3{
+		font-size: 20px;
+	}
+	.text-wrap p {
+		font-size: 14;
+	}
+
+	.more-btn{
+		display: block;
+		position: absolute;
+		right:12px;
+		top:8px;
+		width:40px;
+		height: 40px;
+		border-radius: 8px;
+		border:none;
+		background-color: transparent;
+	}
+	.more-btn2{
+		display: block;
+		position: absolute;
+		right:12px;
+		top:8px;
+		width:40px;
+		height: 40px;
+		border-radius: 8px;
+		border:none;
+		background-color: transparent;
+	}
+	.more-btn .icon{
+		display: block;
+		width:24px;
+		height: 24px;
+		margin: 0 auto;
+		background: url(../assets/icon-menu.svg) no-repeat center;
+		background-size: contain;
+	}
+	.more-btn2 .icon{
+		display: block;
+		width:24px;
+		height: 24px;
+		margin: 0 auto;
+		background: url(../assets/icon-menu2.svg) no-repeat center;
+		background-size: contain;
+	}
+	.more-btn.active .icon{
+		background: url(../assets/icon-close.svg) no-repeat center;
+		background-size: contain;
+	}
+	.more-btn2.active .icon{
+		background: url(../assets/icon-close.svg) no-repeat center;
+		background-size: contain;
+	}
+
+
+	footer {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 10px;
+		color: #8e8e8e;
+		width: 100%;
+		height: 40px;
+		position: fixed;
+		bottom: 0; /* 화면 하단에 고정 */
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center; /* 수직 가운데 정렬 */
+		justify-content: center; /* 수평 가운데 정렬 */
+	}
+
+	.topbutton {
+		color: white;
+		width: 20px;
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		cursor: pointer;
+	  }
+
+	  .topbutton p {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 10px;
+		padding: 0;
+		margin: 0;
+	  }
+
+	  .modal-content {
+		margin: 20% auto; /* 모달 내용을 중앙에 정렬 */
+		padding: 20px;
+		width: 500px;
+		height: 500px;
+		/* background-color: #fefefe; 내용 배경색 */
+	  }
+}
+
+@media screen and (max-width: 480px) {
+	.modal-content {
+		margin: 30% auto; /* 모달 내용을 중앙에 정렬 */
+		padding: 0px;
+		width: 300px;
+		height: 300px;
+		/* background-color: #fefefe; 내용 배경색 */
+	  }
+}
