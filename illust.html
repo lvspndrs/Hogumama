@@ -15,9 +15,10 @@
         <a href="about.html" class="d2">ABOUT</a>
 				<a href="cha.html" class="d2">CHARACTER</a>
 				<a href="illust.html" class="d2">CARTOON</a>
+        <a href="illust2.html" class="d2">ILLUST</a>
         <a href="https://instagram.com/alien_doong?igshid=NzZlODBkYWE4Ng==">
-					<img src="assets/insta2.png" alt="" width="30px">
-				</a>
+          <img id="instaImage" src="assets/insta2.png" alt="" width="30px">
+        </a>
 			</nav>
       
 			<button class="more-btn2">
@@ -38,7 +39,7 @@
         </div>
           
           <!-- 첫 번째 카드 -->
-          <div class="card" onclick="openModal('assets/1.jpg')">
+          <div class="card" onclick="openModal('assets/1-1.jpg')">
             <div class="img-gradient"></div>
             <img id="modalImage" src="assets/1.jpg" alt="" srcset="">
             <div class="text-wrap">
@@ -74,17 +75,17 @@
             </div>
           </div>
 
-          <div class="card" onclick="openModal('assets/h.jpg')">
+          <div class="card" onclick="openModal('assets/5.jpg')">
             <div class="img-gradient"></div>
-            <img id="modalImage" src="assets/h.jpg" alt="" srcset="">
+            <img id="modalImage" src="assets/5.jpg" alt="" srcset="">
             <div class="text-wrap">
-              <h1>트릭 오어 트릿</h1>
+              <h1>더죽뜨</h1>
             </div>
           </div>
 
-          <div class="card" onclick="openModal('assets/5.jpg')">
+          <div class="card" onclick="openModal('assets/6.jpg')">
             <div class="img-gradient"></div>
-            <img id="modalImage" src="assets/5.jpg"  alt="" srcset="">
+            <img id="modalImage" src="assets/6.jpg"  alt="" srcset="">
             <div class="text-wrap">
               <h1>무지개</h1>
             </div>
@@ -92,27 +93,27 @@
 		
 	</div>
   <div class="container2">
-    <div class="card" onclick="openModal('assets/shower.jpg')">
+    <div class="card" onclick="openModal('assets/7-1.jpg')">
       <div class="img-gradient"></div>
-      <img id="modalImage" src="assets/shower.jpg" alt="" srcset="">
+      <img id="modalImage" src="assets/7.jpg" alt="" srcset="">
       <div class="text-wrap">
-        <h1>목욕</h1>
+        <h1>새싹</h1>
       </div>
     </div>
       
-      <div class="card" onclick="openModal('assets/chr.jpg')">
+      <div class="card" onclick="openModal('assets/8-1.jpg')">
         <div class="img-gradient"></div>
-        <img id="modalImage" src="assets/chr.jpg" alt="" srcset="">
+        <img id="modalImage" src="assets/8.jpg" alt="" srcset="">
         <div class="text-wrap">
-          <h1>크리스마스</h1>
+          <h1>새싹2</h1>
         </div>
       </div>
       
-      <div class="card" onclick="openModal('assets/halloween.jpg')">
+      <div class="card" onclick="openModal('assets/9.jpg')">
         <div class="img-gradient"></div>
-        <img id="modalImage" src="assets/halloween.jpg"  alt="" srcset="">
+        <img id="modalImage" src="assets/9.jpg"  alt="" srcset="">
         <div class="text-wrap">
-          <h1>고양이의 성</h1>
+          <h1>장마</h1>
         </div>
       </div>
   </div>
@@ -121,5 +122,18 @@
     
     <script src="js/jquery-3.6.0.min.js"></script>
 	  <script src="js/custom.js"></script>
+    <script>
+      // JavaScript를 사용하여 화면 크기가 변경될 때 이미지 소스를 업데이트합니다.
+      window.addEventListener('resize', function() {
+        const instaImage = document.getElementById('instaImage');
+        const screenWidth = window.innerWidth;
+  
+        if (screenWidth <= 768) {
+          instaImage.src = 'assets/insta1.png';
+        } else {
+          instaImage.src = 'assets/insta2.png';
+        }
+      });
+    </script>
 </body>
 </html>
